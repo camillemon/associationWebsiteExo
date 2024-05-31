@@ -37,22 +37,23 @@
           <img src="{{ asset('images/logo.png') }}" alt="logo" />
         </a>
 
-        <!-- Bouton du menu pour les petits écrans -->
-        <a class="navbar-brand mx-auto d-lg-none" href="{{ path('app_home') }}">
-          <img src="{{ asset('images/logo.png') }}" alt="logo" />
-        </a>
-
-        <button
-          class="navbar-toggler mx-auto"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <!-- Bouton du menu et logo pour les petits écrans -->
+        <div class="d-lg-none text-center">
+          <a class="navbar-brand mx-auto" href="{{ path('app_home') }}">
+            <img src="{{ asset('images/logo.png') }}" alt="logo" />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
 
         <div
           class="collapse navbar-collapse justify-content-end align-items-center"

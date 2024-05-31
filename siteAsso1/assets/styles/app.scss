@@ -39,9 +39,12 @@ h1 {
     margin: 10px 0; /* Ajoute une marge verticale de 10px autour des éléments du menu de navigation */
   }
   .navbar-toggler {
-    margin: 0 auto; /* Centre le bouton du menu */
+    margin: 10px auto 0; /* Centre le bouton du menu avec une marge en haut */
   }
   .navbar-collapse {
     text-align: center;
+  }
+  .d-lg-none {
+    margin: 10px auto 0; /* Centre */
   }
 }
