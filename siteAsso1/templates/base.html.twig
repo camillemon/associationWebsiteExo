@@ -16,6 +16,8 @@
     {% endblock %} {# Inclure le fichier JavaScript bundlé #} {% block
     javascripts %}
     <script src="{{ asset('build/app.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
+
     <!-- Inclure Bootstrap JS et Popper.js via CDN -->
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

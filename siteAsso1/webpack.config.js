@@ -72,3 +72,13 @@ Encore
 //.autoProvidejQuery()
 
 module.exports = Encore.getWebpackConfig();
+
+module: {
+  rules: [
+    {
+      test: /\.scss$/,
+      use: ["style-loader", "css-loader", "sass-loader"],
+      include: /node_modules\/bootstrap/,
+    },
+  ];
+}
