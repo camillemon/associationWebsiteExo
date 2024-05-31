@@ -1,5 +1,38 @@
+/* Importer Bootstrap en premier */
 @import "~bootstrap/scss/bootstrap";
 
-body {
-    background-color: lightgray;
+/* Ensuite, définir vos styles personnalisés */
+.titrePage {
+  color: red;
+}
+
+/* Centrer le logo sur les petits écrans */
+.navbar-brand.mx-auto {
+  display: block; /* bloc pour manipuler marges */
+  margin: 0 auto; /* Centre l'élément horizontalement avec marge auto */
+}
+
+/* tablettes paysage ou formats plus grands */
+@media (min-width: 992px) {
+  .navbar-brand.d-lg-none {
+    display: none; /* Cache le logo centré pour les petits écrans*/
+  }
+
+  .navbar-brand.mx-auto {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .navbar-nav.ms-auto {
+    margin-left: auto; /* Aligne les éléments du menu de navigation à droite */
+  }
+}
+
+/* tablettes portrait ou téléphones */
+@media (min-width: 991.98px) {
+  .navbar-nav {
+    text-align: center; /* Centre le texte des éléments du menu de navigation */
+  }
+  .navbar-nav .nav-item {
+    margin: 10px 0; /* Ajoute une marge verticale de 10px autour des éléments du menu de navigation */
+  }
 }
