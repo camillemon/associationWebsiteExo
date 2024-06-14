@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -7,6 +6,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Entity\Volunteers;
+use App\Entity\Events;
 use App\Form\VolunteerFormType;
 use Doctrine\ORM\EntityManagerInterface;
 
@@ -27,6 +27,7 @@ class EventsController extends AbstractController
         if ($volunteerFormData && array_key_exists('email', $volunteerFormData)) {
             $email = $volunteerFormData['email'];
         }
+
         // Récupérer le volontaire par son email s'il existe
         $volunteerRepository = $this->entityManager->getRepository(Volunteers::class);
         $volunteer = $volunteerRepository->findOneBy(['email' => $email]);
@@ -36,8 +37,13 @@ class EventsController extends AbstractController
             $volunteer = new Volunteers();
         }
 
-        // Créer le formulaire en utilisant VolunteerFormType
-        $form = $this->createForm(VolunteerFormType::class, $volunteer);
+        // Récupérer tous les événements
+        $events = $this->entityManager->getRepository(Events::class)->findAll();
+
+        // Créer le formulaire en utilisant VolunteerFormType et passer les événements
+        $form = $this->createForm(VolunteerFormType::class, $volunteer, [
+            'events' => $events
+        ]);
 
         // Gérer la soumission du formulaire
         $form->handleRequest($request);
@@ -48,7 +54,7 @@ class EventsController extends AbstractController
             $this->entityManager->persist($volunteer);
             $this->entityManager->flush();
 
-            // Redirect to a success page (homepage for now)
+            // Rediriger vers une page de succès (page d'accueil pour le moment)
             return $this->redirectToRoute('app_home');
         }
 

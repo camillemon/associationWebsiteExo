@@ -1,7 +1,5 @@
 <?php
 
-// src/Form/VolunteerFormType.php
-
 namespace App\Form;
 
 use App\Entity\Events;
@@ -24,11 +22,12 @@ class VolunteerFormType extends AbstractType
             ->add('email', EmailType::class)
             ->add('events', EntityType::class, [
                 'class' => Events::class,
+                'choices' => $options['events'], // Utiliser les événements passés en options
                 'choice_label' => function (Events $event) {
                     return $event->getLocation() . ' - ' . $event->getDate()->format('d-m-Y');
                 },
-                'multiple' => true,
-                'expanded' => true, // Utilisation de cases à cocher au lieu d'un menu déroulant
+                'multiple' => true, // Utilisation d'un menu déroulant au lieu de cases à cocher
+                'expanded' => false, // Utilisation d'un menu déroulant
             ])
             ->add('save', SubmitType::class, [
                 'label' => 'Participer',
@@ -42,7 +41,9 @@ class VolunteerFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Volunteers::class,
+            'events' => [] // Ajouter une option par défaut pour les événements
         ]);
     }
 }
+
 
