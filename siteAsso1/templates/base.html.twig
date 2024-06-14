@@ -14,9 +14,8 @@
       rel="stylesheet"
     />
     <!-- Inclure le fichier CSS personnalisé -->
-    <link rel="stylesheet" href="{{ asset('build/app.css') }}">
-    {% endblock %}
-    {% block javascripts %}
+    <link rel="stylesheet" href="{{ asset('build/app.css') }}" />
+    {% endblock %} {% block javascripts %}
     <!-- Inclure le fichier JavaScript bundlé -->
     <script src="{{ asset('build/app.js') }}"></script>
     <!-- Inclure Bootstrap JS et Popper.js via CDN -->
@@ -54,6 +53,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
+        {% set currentRoute = app.request.attributes.get('_route') %}
 
         <div
           class="collapse navbar-collapse justify-content-end align-items-center"
@@ -63,8 +63,10 @@
             <li class="nav-item">
               <a class="nav-link" href="#">En savoir plus</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Événements</a>
+            <li
+              class="nav-item {% if currentRoute == 'app_events' %}fw-bold{% endif %}"
+            >
+              <a class="nav-link" href="{{ path('app_events') }}">Événements</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Contact</a>
@@ -79,6 +81,6 @@
     {% endblock %}
   </header>
   <body>
-    {% block body %}{% endblock %} 
+    {% block body %}{% endblock %}
   </body>
 </html>
