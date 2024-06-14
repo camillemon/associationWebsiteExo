@@ -1,20 +1,32 @@
 {
-    "require": {
-        "symfony/orm-pack": "^2.4",
-        "symfony/webpack-encore-bundle": "^2.1",
-        "symfony/form": "^7.0",
-        "symfony/security-bundle": "^7.0",
-        "symfony/security-csrf": "^7.0",
-        "twig/twig": "^3.9",
-        "twig/extra-bundle": "^3.9",
-        "twig/cssinliner-extra": "^3.9",
-        "doctrine/annotations": "^2.0",
-        "doctrine/doctrine-bundle": "^2.12",
-        "symfony/monolog-bundle": "^3.10",
-        "symfony/maker-bundle": "^1.58",
-        "symfony/validator": "^7.0",
-        "twbs/bootstrap": "^5.3",
-        "symfony/profiler-pack": "^1.0",
-        "symfony/debug-pack": "^1.0"
+  "require": {
+    "symfony/orm-pack": "^2.4",
+    "symfony/webpack-encore-bundle": "^2.1",
+    "symfony/form": "^7.1",
+    "symfony/security-bundle": "^7.1",
+    "symfony/security-csrf": "^7.1",
+    "twig/twig": "^4.0",
+    "symfony/twig-bundle": "^5.0",
+    "twig/extra-bundle": "^4.0",
+    "twig/cssinliner-extra": "^4.0",
+    "doctrine/annotations": "^2.0",
+    "doctrine/doctrine-bundle": "^2.12",
+    "symfony/monolog-bundle": "^3.10",
+    "symfony/maker-bundle": "^1.58",
+    "symfony/validator": "^7.1",
+    "twbs/bootstrap": "^5.3",
+    "symfony/profiler-pack": "^1.0",
+    "symfony/debug-pack": "^1.0"
+  },
+  "config": {
+    "platform": {
+      "php": "8.1"
     }
+  },
+  "extra": {
+    "symfony": {
+      "allow-contrib": false,
+      "require": "7.1.*"
+    }
+  }
 }
