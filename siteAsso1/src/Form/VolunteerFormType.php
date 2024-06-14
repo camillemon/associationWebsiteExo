@@ -31,7 +31,10 @@ class VolunteerFormType extends AbstractType
                 'expanded' => true, // Utilisation de cases à cocher au lieu d'un menu déroulant
             ])
             ->add('save', SubmitType::class, [
-                'label' => 'Submit',
+                'label' => 'Participer',
+                'attr' => [
+                    'class' => 'btn btn-success',
+                ]
             ]);
     }
 

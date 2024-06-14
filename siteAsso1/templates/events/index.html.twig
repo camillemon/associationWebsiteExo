@@ -4,8 +4,7 @@ block body %}
   <div class="container my-5">
     <div class="row">
       <div class="col-lg-6">
-        <p>Événements</p>
-        <h1>Je m’inscris</h1>
+        <h1>Evénements de collecte près de chez vous</h1>
         <p>Inscrivez-vous à la prochaine collecte près de chez vous.</p>
         <ul class="d-none d-lg-block">
           <li>
@@ -27,18 +26,17 @@ block body %}
           <div class="card-body">
             {{ form_start(form) }}
             <div class="form-group">
-            {{ form_row(form.name) }}
+            {{ form_row(form.name, {'label' : 'Prénom'}) }}
           </div>
           <div class="form-group">
-            {{ form_row(form.surname) }}
+            {{ form_row(form.surname, {'label' : 'Nom'}) }}
           </div>
           <div class="form-group">
-            {{ form_row(form.email) }}
+            {{ form_row(form.email, {'label' : 'Adresse email'}) }}
           </div>
           <div class="form-group">
             {{ form_row(form.events) }}
           </div>
-          <button type="submit" class="btn btn-primary"> Je valide mon inscription</button>
           {{ form_end(form) }}
         </div>
       </div>
