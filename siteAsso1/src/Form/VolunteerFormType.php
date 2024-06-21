@@ -41,10 +41,11 @@ class VolunteerFormType extends AbstractType
     {
         $resolver->setDefaults([
             'data_class' => Volunteers::class,
-            'events' => []
+            'events' => [] // Option par défaut pour les événements
         ]);
     }
 }
+
 
 
 

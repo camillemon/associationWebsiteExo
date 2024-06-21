@@ -23,7 +23,6 @@
         <div class="col-lg-6">
             <div class="card">
                 <div class="card-body">
-                    {{ dump(form) }} <!-- Dump pour vérifier le contenu du formulaire -->
                     {{ form_start(form, {'action': path('app_events'), 'method': 'POST'}) }}
                     <div class="form-group">
                         {{ form_row(form.name, {'label': 'Prénom'}) }}
@@ -38,7 +37,7 @@
                         {{ form_row(form.events) }}
                     </div>
                     <div class="form-group">
-                        {{ form_row(form.save, {'label': 'Participer'}) }} <!-- Ajout du bouton de soumission -->
+                        {{ form_row(form.save, {'label': 'Participer'}) }}
                     </div>
                     {{ form_end(form) }}
                 </div>
