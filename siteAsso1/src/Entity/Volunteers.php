@@ -88,6 +88,8 @@ class Volunteers
     {
         if (!$this->events->contains($event)) {
             $this->events->add($event);
+            // Ensure the inverse side is updated as well
+            $event->addVolunteer($this);
         }
 
         return $this;
@@ -95,8 +97,12 @@ class Volunteers
 
     public function removeEvent(Events $event): static
     {
-        $this->events->removeElement($event);
+        if ($this->events->removeElement($event)) {
+            // Ensure the inverse side is updated as well
+            $event->removeVolunteer($this);
+        }
 
         return $this;
     }
 }
+

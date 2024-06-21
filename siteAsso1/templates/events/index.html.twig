@@ -1,46 +1,49 @@
-{% extends 'base.html.twig' %} {% block title %}Inscriptions{% endblock %} {%
-block body %}
-<body>
-  <div class="container my-5">
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscriptions{% endblock %}
+
+{% block body %}
+<div class="container my-5">
     <div class="row">
-      <div class="col-lg-6">
-        <h1>Evénements de collecte près de chez vous</h1>
-        <p>Inscrivez-vous à la prochaine collecte près de chez vous.</p>
-        <ul class="d-none d-lg-block">
-          <li>
-            Je planifie<br />je prends rendez-vous et ce là où se trouve le
-            prochain événement ce collècte libre ce manche.
-          </li>
-          <li>
-            Je prépare mes aliments<br />Lorem ipsum dolor sit amet, consectetur
-            adipiscing elit. Lorem, salve lus. Pulvinar non mauris.
-          </li>
-          <li>
-            Je donne<br />Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit. Lorem, salve lus. Pulvinar non mauris.
-          </li>
-        </ul>
-      </div>
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-            {{ form_start(form) }}
-            <div class="form-group">
-            {{ form_row(form.name, {'label' : 'Prénom'}) }}
-          </div>
-          <div class="form-group">
-            {{ form_row(form.surname, {'label' : 'Nom'}) }}
-          </div>
-          <div class="form-group">
-            {{ form_row(form.email, {'label' : 'Adresse email'}) }}
-          </div>
-          <div class="form-group">
-            {{ form_row(form.events) }}
-          </div>
-          {{ form_end(form) }}
+        <div class="col-lg-6">
+            <h1>Evénements de collecte près de chez vous</h1>
+            <p>Inscrivez-vous à la prochaine collecte près de chez vous.</p>
+            <ul class="d-none d-lg-block">
+                <li>
+                    Je planifie<br />Je prends rendez-vous là où se trouve le prochain événement.
+                </li>
+                <li>
+                    Je prépare mes aliments<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>
+                    Je donne<br />Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+            </ul>
         </div>
-      </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-body">
+                    {{ dump(form) }} <!-- Dump pour vérifier le contenu du formulaire -->
+                    {{ form_start(form, {'action': path('app_events'), 'method': 'POST'}) }}
+                    <div class="form-group">
+                        {{ form_row(form.name, {'label': 'Prénom'}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.surname, {'label': 'Nom'}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.email, {'label': 'Adresse email'}) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.events) }}
+                    </div>
+                    <div class="form-group">
+                        {{ form_row(form.save, {'label': 'Participer'}) }} <!-- Ajout du bouton de soumission -->
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</body>
+</div>
 {% endblock %}
