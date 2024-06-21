@@ -1,6 +1,73 @@
 {% extends 'base.html.twig' %} {% block title %}Soutenez l'association Vestiaire
 Solidaire{% endblock %} {% block body %}
-<body>
-  <h1 class="titrePage">Des vêtements pour un nouveau départ !</h1>
-</body>
-{% endblock %}
+<section class="py-4 py-xl-5">
+  <div class="container banner home">
+    <div class="text-center p-4 p-lg-5">
+      <h1 class="fw-bold mb-4">Des vêtements pour <br />un nouveau départ !</h1>
+      <p class="fw-bold text-primary mb-2">
+        Faites un don de vêtements et aidez les sans abris à se reconstruire.
+      </p>
+      <button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">
+        Je participe
+      </button>
+    </div>
+  </div>
+</section>
+<div class="container py-4 py-xl-5">
+  <div class="row gy-4 gy-md-0">
+      <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
+          <div style="max-width: 350px;">
+              <h2 class="text-uppercase fw-bold">Un petit geste, un grand impact</h2>
+              <p class="my-3">Un simple don peut changer une destinée. S&#39;engager est simple : inscrivez-vous à une collecte près de chez vous, puis venez déposer vos dons le jour J.</p><a class="btn btn-primary me-2" role="button" href="#">Trouver une collecte près de chez moi</a>
+          </div>
+      </div>
+      <div class="col-md-6">
+          <div class="p-xl-5 m-xl-5"><img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" /></div>
+      </div>
+  </div>
+</div>
+<section>
+  <div class="container py-4 py-xl-5">
+    <div class="row mb-5">
+      <div class="col-md-8 col-xl-6 text-center mx-auto">
+        <h2>Comment donner ?</h2>
+        <p>Découvrez le parcours de vos dons, de votre armoire jusqu'à ceux qui en ont besoin. Un processus simple pour un impact durable.</p>
+      </div>
+    </div>
+    <div class="row gy-4 row-cols-1 row-cols-md-2 row-cols-xl-3">
+      <div class="col d-flex">
+        <div class="card flex-fill">
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 1" />
+          <div class="card-body d-flex flex-column">
+            <p class="text-primary card-text mb-0">Étape 1</p>
+            <h4 class="card-title">Je plannifie</h4>
+            <p class="card-text flex-grow-1">Je repère quand et où se trouve le prochain événement de collecte près de chez moi.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="card flex-fill">
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 2" />
+          <div class="card-body d-flex flex-column">
+            <p class="text-primary card-text mb-0">Étape 2</p>
+            <h4 class="card-title">Je prépare mes vêtements</h4>
+            <p class="card-text flex-grow-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tellus dui, pulvinar non mauris.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col d-flex">
+        <div class="card flex-fill">
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px;" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 3" />
+          <div class="card-body d-flex flex-column">
+            <p class="text-primary card-text mb-0">Étape 3</p>
+            <h4 class="card-title">Je donne</h4>
+            <p class="card-text flex-grow-1">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    {% endblock %}
+
+
