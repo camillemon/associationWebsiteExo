@@ -1,5 +1,25 @@
 /* Importer Bootstrap en premier */
+/* Variables personnalisées */
+$primary: rgb(45, 85, 111);
+$primary-hover: rgb(66, 113, 148);
+
 @import "node_modules/bootstrap/scss/bootstrap";
+
+
+/* Styles personnalisés */
+.homepageSubtitle {
+  color: $primary;
+}
+
+.btn-primary {
+  background-color: $primary-hover;
+  border-color: $primary-hover;
+
+  &:hover {
+    background-color: darken($primary-hover, 10%);
+    border-color: darken($primary-hover, 10%);
+  }
+}
 
 .navbar-brand {
   font-weight: 900;
@@ -17,6 +37,7 @@
       line-height: 1;
       margin-bottom: 1.5rem !important;
       margin-right: 5rem;
+
   }
 }
 
