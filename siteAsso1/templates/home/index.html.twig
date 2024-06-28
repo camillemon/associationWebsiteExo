@@ -1,23 +1,32 @@
-{% extends 'base.html.twig' %} {% block title %}Soutenez l'association Vestiaire
-Solidaire{% endblock %} {% block body %}
+{% extends 'base.html.twig' %}
+
+{% block title %}Soutenez l'association Vestiaire Solidaire{% endblock %}
+
+{% block body %}
 <section class="py-4 py-xl-5 vh-100 d-flex align-items-center">
   <div class="container banner home">
-    <div class="text-center p-4 p-lg-5 ">
-      <h1 class="fw-bold mb-4">Des vêtements pour <br />un nouveau départ !</h1>
-      <p class="fw-bold text-primary mb-2">
-        Faites un don de vêtements et aidez les sans abris à se reconstruire.
-      </p>
-      <button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">
-        Je participe
-      </button>
+    <div class="row banner">
+      <div class="p-4 p-lg-5 col-lg-8">
+        <h1 class="fw-bold mb-4 homepageH1">
+          Des vêtements pour <br />un nouveau départ !
+        </h1>
+        <p class="fw-bold text-primary mb-2 homepageSubtitle">
+          Faites un don de vêtements et aidez les sans abris à se reconstruire.
+        </p>
+        <button class="btn btn-primary fs-5 me-2 py-2 px-4" type="button">
+          Je participe
+        </button>
+      </div>
+      <div class="col-lg-4">
+        <img src="{{ asset('images/giving_clothes1.jpg') }}" class="img-giving img-fluid rounded-3" alt="Symfony" />
+      </div>
     </div>
   </div>
 </section>
+
 <div class="container py-4 py-xl-5">
   <div class="row gy-4 gy-md-0">
-    <div
-      class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center"
-    >
+    <div class="col-md-6 text-center text-md-start d-flex d-sm-flex d-md-flex justify-content-center align-items-center justify-content-md-start align-items-md-center justify-content-xl-center">
       <div style="max-width: 350px">
         <h2 class="fw-bold">Un petit geste,<br />un grand impact</h2>
         <p class="my-3">
@@ -25,22 +34,17 @@ Solidaire{% endblock %} {% block body %}
           inscrivez-vous à une collecte près de chez vous, puis venez déposer
           vos dons le jour J.
         </p>
-        <a class="btn btn-primary me-2" role="button" href="#"
-          >Trouver une collecte près de chez moi</a
-        >
+        <a class="btn btn-primary me-2" role="button" href="#">Trouver une collecte près de chez moi</a>
       </div>
     </div>
     <div class="col-md-6">
       <div class="p-xl-5 m-xl-5">
-        <img
-          class="rounded img-fluid w-100 fit-cover"
-          style="min-height: 300px"
-          src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-        />
+        <img class="rounded img-fluid w-100 fit-cover" style="min-height: 300px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Placeholder" />
       </div>
     </div>
   </div>
 </div>
+
 <section>
   <div class="container py-4 py-xl-5">
     <div class="row mb-5">
@@ -53,17 +57,10 @@ Solidaire{% endblock %} {% block body %}
       </div>
     </div>
     <!-- Version desktop -->
-    <div
-      class="row gy-4 row-cols-1 row-cols-lg-2 row-cols-xl-3 d-none d-md-flex"
-    >
+    <div class="row gy-4 row-cols-1 row-cols-lg-2 row-cols-xl-3 d-none d-md-flex">
       <div class="col d-flex">
         <div class="card flex-fill">
-          <img
-            class="card-img-top w-100 d-block fit-cover"
-            style="height: 200px"
-            src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-            alt="Étape 1"
-          />
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 1" />
           <div class="card-body d-flex flex-column">
             <p class="text-primary card-text mb-0">Étape 1</p>
             <h4 class="card-title">Je plannifie</h4>
@@ -76,12 +73,7 @@ Solidaire{% endblock %} {% block body %}
       </div>
       <div class="col d-flex">
         <div class="card flex-fill">
-          <img
-            class="card-img-top w-100 d-block fit-cover"
-            style="height: 200px"
-            src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-            alt="Étape 2"
-          />
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 2" />
           <div class="card-body d-flex flex-column">
             <p class="text-primary card-text mb-0">Étape 2</p>
             <h4 class="card-title">Je prépare mes vêtements</h4>
@@ -94,12 +86,7 @@ Solidaire{% endblock %} {% block body %}
       </div>
       <div class="col d-flex">
         <div class="card flex-fill">
-          <img
-            class="card-img-top w-100 d-block fit-cover"
-            style="height: 200px"
-            src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-            alt="Étape 3"
-          />
+          <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 3" />
           <div class="card-body d-flex flex-column">
             <p class="text-primary card-text mb-0">Étape 3</p>
             <h4 class="card-title">Je donne</h4>
@@ -113,21 +100,11 @@ Solidaire{% endblock %} {% block body %}
       </div>
     </div>
     <!-- Version mobile (carousel) -->
-    <div
-      id="mobileCarousel"
-      class="carousel slide d-lg-none"
-      data-bs-ride="carousel"
-    >
-      
+    <div id="mobileCarousel" class="carousel slide d-lg-none" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
           <div class="card">
-            <img
-              class="card-img-top w-100 d-block fit-cover"
-              style="height: 200px"
-              src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-              alt="Étape 1"
-            />
+            <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 1" />
             <div class="card-body">
               <p class="text-primary card-text mb-0">Étape 1</p>
               <h4 class="card-title">Je plannifie</h4>
@@ -140,12 +117,7 @@ Solidaire{% endblock %} {% block body %}
         </div>
         <div class="carousel-item">
           <div class="card">
-            <img
-              class="card-img-top w-100 d-block fit-cover"
-              style="height: 200px"
-              src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-              alt="Étape 2"
-            />
+            <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 2" />
             <div class="card-body">
               <p class="text-primary card-text mb-0">Étape 2</p>
               <h4 class="card-title">Je prépare mes vêtements</h4>
@@ -158,12 +130,7 @@ Solidaire{% endblock %} {% block body %}
         </div>
         <div class="carousel-item">
           <div class="card">
-            <img
-              class="card-img-top w-100 d-block fit-cover"
-              style="height: 200px"
-              src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png"
-              alt="Étape 3"
-            />
+            <img class="card-img-top w-100 d-block fit-cover" style="height: 200px" src="https://cdn.bootstrapstudio.io/placeholders/1400x800.png" alt="Étape 3" />
             <div class="card-body">
               <p class="text-primary card-text mb-0">Étape 3</p>
               <h4 class="card-title">Je donne</h4>
@@ -177,26 +144,9 @@ Solidaire{% endblock %} {% block body %}
         </div>
       </div>
       <div class="carousel-indicators custom-indicators">
-        <button
-          type="button"
-          data-bs-target="#mobileCarousel"
-          data-bs-slide-to="0"
-          class="active"
-          aria-current="true"
-          aria-label="Slide 1"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#mobileCarousel"
-          data-bs-slide-to="1"
-          aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#mobileCarousel"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
-        ></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#mobileCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
       </div>
     </div>
   </div>

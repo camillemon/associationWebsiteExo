@@ -4,6 +4,22 @@
 .navbar-brand {
   font-weight: 900;
 }
+
+@media (min-width: 1024px) {
+  /* Augmente la taille de la police pour les grands écrans */
+  .homepageH1 {
+      font-size: 3.2rem;
+      line-height: 1;
+  }
+  /* Réduit la taille de la sous-titre pour les grands écrans */
+  .homepageSubtitle {
+      font-size: 1.5rem;
+      line-height: 1;
+      margin-bottom: 1.5rem !important;
+      margin-right: 5rem;
+  }
+}
+
 /* Centrer le logo sur les petits écrans */
 .navbar-brand.mx-auto {
   display: block; /* bloc pour manipuler marges */
