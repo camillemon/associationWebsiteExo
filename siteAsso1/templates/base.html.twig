@@ -27,60 +27,60 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     {% endblock %}
   </head>
-  <header>
-    {% block header %}
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <div class="container-fluid">
-        <!-- LOGO pour les grands écrans -->
-        <a class="navbar-brand d-none d-lg-block" href="{{ path('app_home') }}">
-          <span>Vestiaires Solidaires</span>
-        </a>
-
-        <!-- Bouton du menu et logo pour les petits écrans -->
-        <div class="d-lg-none text-center">
-          <a class="navbar-brand mx-auto" href="{{ path('app_home') }}">
+  <body>
+    <header>
+      {% block header %}
+      <nav class="header navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <!-- LOGO pour les grands écrans -->
+          <a class="navbar-brand d-none d-lg-block second-color" href="{{ path('app_home') }}">
             <span>Vestiaires Solidaires</span>
           </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        </div>
-        {% set currentRoute = app.request.attributes.get('_route') %}
-
-        <div
-          class="collapse navbar-collapse justify-content-end align-items-center"
-          id="navbarNav"
-        >
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">En savoir plus</a>
-            </li>
-            <li
-              class="nav-item {% if currentRoute == 'app_events' %}fw-bold{% endif %}"
+  
+          <!-- Bouton du menu et logo pour les petits écrans -->
+          <div class="d-lg-none text-center">
+            <a class="navbar-brand mx-auto second-color" href="{{ path('app_home') }}">
+              <span>Vestiaires Solidaires</span>
+            </a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
             >
-              <a class="nav-link" href="{{ path('app_events') }}">Événements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
-            </li>
-            <li class="nav-item">
-              <a class="btn btn-primary ms-2" href="#">Devenir bénévole</a>
-            </li>
-          </ul>
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+          {% set currentRoute = app.request.attributes.get('_route') %}
+  
+          <div
+            class="collapse navbar-collapse justify-content-end align-items-center"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ">
+                <a class="nav-link second-color" href="#">En savoir plus</a>
+              </li>
+              <li
+                class="nav-item {% if currentRoute == 'app_events' %}fw-bold{% endif %}"
+              >
+                <a class="nav-link second-color" href="{{ path('app_events') }}">Événements</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link second-color" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="btn btn-primary ms-2" href="#">Devenir bénévole</a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </nav>
-    {% endblock %}
-  </header>
-  <body>
+      </nav>
+      {% endblock %}
+    </header>
     {% block body %}{% endblock %}
   </body>
 </footer>
@@ -89,7 +89,7 @@
   <div class="container">
     <div class="row align-items-center">
       <div class="col-12 col-md-6 text-center text-md-start">
-        <p class="text-muted my-2">Copyright © 2024 Vestiaires Solidaires</p>
+        <p class="text-muted my-2 light-perso">Copyright © 2024 Vestiaires Solidaires</p>
       </div>
       <div class="col-12 col-md-6 text-center text-md-end mt-3 mt-md-0">
         <ul class="list-inline my-2 mb-0">
