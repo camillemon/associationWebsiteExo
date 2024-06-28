@@ -46,4 +46,50 @@
   .d-lg-none {
     margin: 10px auto 0; /* Centre */
   }
+  .carousel-item .card {
+    height: 100%;
+  }
+  .carousel-item .card-body {
+    display: flex;
+    flex-direction: column;
+  }
+  .carousel-item .card-text {
+    flex-grow: 1;
+  }
+
+  /* Positionnement personnalisé des indicateurs du carousel */
+  .carousel-indicators.custom-indicators {
+    bottom: auto; /* Annule le positionnement par défaut en bas */
+    top: 170px; /* Positionne les indicateurs à 200px du haut (ajuster selon la hauteur de l'image) */
+    transform: translateY(
+      -100%
+    ); /* Déplace les indicateurs vers le haut de leur propre hauteur */
+    margin-bottom: 0; /* Supprime la marge inférieure par défaut */
+    margin-top: 10px; /* Ajoute un petit espace au-dessus des indicateurs */
+  }
+
+  /* Style des boutons indicateurs individuels */
+  .carousel-indicators.custom-indicators [data-bs-target] {
+    width: 10px; /* Largeur de chaque indicateur */
+    height: 10px; /* Hauteur de chaque indicateur */
+    border-radius: 50%; /* Rend les indicateurs circulaires */
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.5
+    ); /* Couleur de fond semi-transparente */
+    border: none; /* Supprime la bordure par défaut */
+    margin: 0 5px; /* Ajoute un espace horizontal entre les indicateurs */
+  }
+
+  /* Style de l'indicateur actif */
+  .carousel-indicators.custom-indicators .active {
+    background-color: white; /* Couleur de fond pleine pour l'indicateur actif */
+  }
+
+  /* Assure une hauteur minimale pour les cartes du carousel */
+  .carousel-item .card {
+    min-height: 400px; /* Définit une hauteur minimale pour les cartes (ajuster selon vos besoins) */
+  }
 }
