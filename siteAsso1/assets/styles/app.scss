@@ -4,10 +4,9 @@ $primary: #1072ac;
 $primary-hover: darken($primary, 10%);
 $firstColor: #08263f;
 $secondColor: #f4f7f3;
-$light:#f4f7f3;
+$light: #f4f7f3;
 
 @import "node_modules/bootstrap/scss/bootstrap";
-
 
 /* Styles personnalisés */
 .header.navbar {
@@ -19,14 +18,13 @@ body {
 }
 
 .second-color {
-  color:$secondColor;
+  color: $secondColor;
 }
 
 .btn-primary {
   background-color: $primary-hover;
   border-color: $primary-hover;
   color: $light;
-
   &:hover {
     background-color: $primary-hover;
     border-color: $primary-hover;
@@ -36,6 +34,13 @@ body {
 
 .navbar-brand {
   font-weight: 900;
+  &:hover {
+    color: darken($light, 10%) !important;
+  }
+}
+
+.nav-item :hover {
+  color: darken($light, 10%) !important;
 }
 
 .banner-section {
@@ -45,20 +50,18 @@ body {
   }
 }
 
-
 @media (min-width: 1024px) {
   /* Augmente la taille de la police pour les grands écrans */
   .homepageH1 {
-      font-size: 3.2rem;
-      line-height: 1;
+    font-size: 3.2rem;
+    line-height: 1;
   }
   /* Réduit la taille de la sous-titre pour les grands écrans */
   .homepageSubtitle {
-      font-size: 1.5rem;
-      line-height: 1;
-      margin-bottom: 1.5rem !important;
-      margin-right: 5rem;
-
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-bottom: 1.5rem !important;
+    margin-right: 5rem;
   }
 }
 
@@ -109,11 +112,12 @@ body {
     .row {
       text-align: center;
     }
-    .homepageH1, .homepageSubtitle {
+    .homepageH1,
+    .homepageSubtitle {
       text-align: center;
     }
   }
-  
+
   .d-lg-none {
     margin: 10px auto 0; /* Centre */
   }
